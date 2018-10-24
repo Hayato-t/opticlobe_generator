@@ -1,0 +1,23 @@
+[
+  {
+    "target": "R1-6",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "L1",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "L3",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  }
+]

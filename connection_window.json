@@ -1,0 +1,54 @@
+[
+  {
+    "target": "L1",
+    "sources": [
+      {
+        "source": "R1-6",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn",
+      "section": {
+        "name": "axon",
+        "point": 0.1
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -80
+    }
+  },
+  {
+    "target": "L3",
+    "sources": [
+      {
+        "source": "R1-6",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [60]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn",
+      "section": {
+        "name": "axon",
+        "point": 0.1
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -80
+    }
+  }
+]
