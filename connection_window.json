@@ -1,5 +1,6 @@
 [
   {
+    "comment": "L1 input",
     "target": "L1",
     "sources": [
       {
@@ -13,19 +14,188 @@
       }
     ],
     "synapse": {
-      "suffix": "gsyn",
+      "suffix": "gsyn2",
       "section": {
         "name": "axon",
-        "point": 0.1
+        "point": 0.5
       },
       "value": "vpre"
     },
     "synapse_opt": {
       "vth": -75,
-      "vre": -80
+      "vre": -80,
+      "delay": 0
     }
   },
   {
+    "comment": "L1 delayed input",
+    "target": "L1",
+    "sources": [
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [32]
+      },
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [24]
+      },
+      {
+        "source": "Tm3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [25]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -40,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "L1 delayed inhibitory input",
+    "target": "L1",
+    "sources": [
+      {
+        "source": "C2",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [25]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "L2 input",
+    "target": "L2",
+    "sources": [
+      {
+        "source": "R1-6",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -80,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "L2 delayed input",
+    "target": "L2",
+    "sources": [
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [7]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -40,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "L2 delayed inihibitory input",
+    "target": "L2",
+    "sources": [
+      {
+        "source": "C2",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [15]
+      },
+      {
+        "source": "C3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [67]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "L3 input",
     "target": "L3",
     "sources": [
       {
@@ -39,16 +209,1088 @@
       }
     ],
     "synapse": {
-      "suffix": "gsyn",
+      "suffix": "gsyn2",
       "section": {
         "name": "axon",
-        "point": 0.1
+        "point": 0.5
       },
       "value": "vpre"
     },
     "synapse_opt": {
       "vth": -75,
-      "vre": -80
+      "vre": -80,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "L3 delayed input",
+    "target": "L3",
+    "sources": [
+      {
+        "source": "L4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [0,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -40,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "L3 delayed inihibitory input",
+    "target": "L3",
+    "sources": [
+      {
+        "source": "C2",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [5]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Tm3 non delay input",
+    "target": "Tm3",
+    "sources": [
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      },
+      {
+        "source": "L1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      },
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      },
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "Tm3 delayed input (TmY series ignored)",
+    "target": "Tm3",
+    "sources": [
+      {
+        "source": "Tm3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Mi1 non delay input",
+    "target": "Mi1",
+    "sources": [
+      {
+        "source": "L1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [156]
+      },
+      {
+        "source": "L3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [28]
+      },
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [44]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "Mi1 delayed input (TmY series ignored)",
+    "target": "Mi1",
+    "sources": [
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [11]
+      },
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [2]
+      },
+      {
+        "source": "C3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [3]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Mi1 delayed inihibitory input (TmY series ignored)",
+    "target": "Mi1",
+    "sources": [
+      {
+        "source": "C2",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [15]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Mi4 non delay input",
+    "target": "Mi4",
+    "sources": [
+      {
+        "source": "L2",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [5]
+      },
+      {
+        "source": "L3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [1]
+      },
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [21,3,3,4,2,8,0]
+      },
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [16]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "Mi4 delayed input (Tm20 series ignored)",
+    "target": "Mi4",
+    "sources": [
+      {
+        "source": "C2",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [1]
+      },
+      {
+        "source": "C3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [2]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Mi4 delayed inihibitory input (TmY series ignored)",
+    "target": "Mi4",
+    "sources": [
+      {
+        "source": "Mi9",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [24]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Mi9 non delay input",
+    "target": "Mi9",
+    "sources": [
+      {
+        "source": "L2",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [2]
+      },
+      {
+        "source": "L3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [65]
+      },
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [10]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "Mi9 delayed input (Tm20 series ignored)",
+    "target": "Mi9",
+    "sources": [
+      {
+        "source": "T4a",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [0]
+      },
+      {
+        "source": "T4b",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [0]
+      },
+      {
+        "source": "T4c",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [0]
+      },
+      {
+        "source": "T4d",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Mi9 delayed inihibitory input (TmY series ignored)",
+    "target": "Mi9",
+    "sources": [
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [57]
+      },
+      {
+        "source": "C3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [5]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "C2 non delay input delay system ignored",
+    "target": "C2",
+    "sources": [
+      {
+        "source": "L1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [57]
+      },
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [10,1,4,0,3,9,2]
+      },
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [7]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "C3 non delay input delay system ignored",
+    "target": "C3",
+    "sources": [
+      {
+        "source": "L1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [195]
+      },
+      {
+        "source": "L2",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [3]
+      },
+      {
+        "source": "L3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [7]
+      },
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [10]
+      },
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [11]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "T4a non-delayed ex input",
+    "target": "T4a",
+    "sources": [
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [36,5,0,2,4,2,25]
+      },
+      {
+        "source": "Tm3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "T4a delayed inhibitory input",
+    "target": "T4a",
+    "sources": [
+      {
+        "source": "Mi9",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 2,
+        "num_synapse": [0,9,0,0,0,0,0,5,3,0,0,0,0,0,0,0,0,0,0]
+      },
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [0,0,0,0,5,8,0]
+      },
+      {
+        "source": "C3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [0,0,0,0,4,7,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4a Feedback",
+    "target": "T4a",
+    "sources": [
+      {
+        "source": "T4a",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -40,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4b non-delayed ex input",
+    "target": "T4b",
+    "sources": [
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      },
+      {
+        "source": "Tm3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "T4b delayed inhibitory input",
+    "target": "T4b",
+    "sources": [
+      {
+        "source": "Mi9",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 2,
+        "num_synapse": [200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      },
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      },
+      {
+        "source": "C3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4b Feedback",
+    "target": "T4b",
+    "sources": [
+      {
+        "source": "T4b",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -40,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4c non-delayed ex input",
+    "target": "T4c",
+    "sources": [
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      },
+      {
+        "source": "Tm3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "T4c delayed inhibitory input",
+    "target": "T4c",
+    "sources": [
+      {
+        "source": "Mi9",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 2,
+        "num_synapse": [200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      },
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      },
+      {
+        "source": "C3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4c Feedback",
+    "target": "T4c",
+    "sources": [
+      {
+        "source": "T4c",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -40,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4d non-delayed ex input",
+    "target": "T4d",
+    "sources": [
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      },
+      {
+        "source": "Tm3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -20,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "T4d delayed inhibitory input",
+    "target": "T4d",
+    "sources": [
+      {
+        "source": "Mi9",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 2,
+        "num_synapse": [200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+      },
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      },
+      {
+        "source": "C3",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [200,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -80,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4d Feedback",
+    "target": "T4d",
+    "sources": [
+      {
+        "source": "T4d",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [200]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -40,
+      "delay": 1
     }
   }
 ]

@@ -2,6 +2,12 @@ import json
 import numpy as np
 from itertools import product
 neighbors = [[0,1],[0,-1],[1,0],[-1,0],[1,-1],[-1,1]]
+windowsize0 = [[0,0]]
+windowsize1 = [[0,0],[1,0],[1,-1],[0,-1],[-1,0],[-1,1],[0,1]]
+windowsize2 = [[0,0],[1,0],[1,-1],[0,-1],[-1,0],[-1,1],[0,1],[1,1],[2,0],[2,-1],[2,-2],[1,-2],[0,-2],[-1,-1],[-2,0],[-2,1],[-2,2],[-1,2],[0,2]]
+windows["0"] = windowsize0
+windows["1"] = windowsize1
+windows["2"] = windowsize2
 
 #layer_name = ["R1-6","L1","L3","L5","Mi1","Tm3","Mi4","Mi9","TmY15","CT1","C1"]
 #dynamics = ["R","L","L","L","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1"]
@@ -21,9 +27,13 @@ for con in connection:
             n = {}
             n["target_synapse"] = con["synapse"]
             n["synapse_opt"] = con["synapse_opt"]
-            if src["windowsize"] == 0:
+            for coord in windows[str(src["windowsize"])]:
+                if x + coord[0]< 0 or x + coord[0]>= w:
+                    continue
+                if y + coord[1]< 0 or y + coord[1]>= h:
+                    continue
                 n["target_cellname"] = con["target"] + "," + str(x) + "," + str(y)
-                n["source_cellname"] = src["source"] + "," + str(x) + "," + str(y)
+                n["source_cellname"] = src["source"] + "," + str(x+coord[0]) + "," + str(y+coord[1])
                 n["source_section"] = src["section"]
                 synlist = src["num_synapse"]
                 n["synapse_opt"]["numsyn"] = synlist[0]

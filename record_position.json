@@ -19,5 +19,89 @@
       "name": "axon",
       "point": 0.5
     }
+  },
+  {
+    "target": "L5",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "C2",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "C3",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "C1",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "Mi1",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "Tm3",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "Mi9",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "Mi4",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "T4a",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "T4b",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "T4c",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "T4d",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
   }
 ]
