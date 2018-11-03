@@ -3,8 +3,8 @@ import numpy as np
 from itertools import product
 neighbors = [[0,1],[0,-1],[1,0],[-1,0],[1,-1],[-1,1]]
 
-layer_name = ["R1-6","L1","L3","L5","Mi1","Tm3","Mi4","Mi9","TmY15","CT1","C1","T4a","T4b","T4c","T4d"]
-dynamics = ["R","L","L","L","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1"]
+layer_name = ["R1-6","L1","L3","L5","Mi1","Tm3","Mi4","Mi9","TmY15","CT1","C2","C3","T4a","T4b","T4c","T4d"]
+dynamics = ["R","L","L","L","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1"]
 # layer size
 w = 35
 h = 40

@@ -868,8 +868,8 @@
           "name": "axon",
           "point": 0.5
         },
-        "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "windowsize": 2,
+        "num_synapse": [3,17,9,2,0,6,3,0,1,0,0,0,0,0,0,0,0,0,0]
       }
     ],
     "synapse": {
@@ -942,8 +942,8 @@
           "name": "axon",
           "point": 0.5
         },
-        "windowsize": 0,
-        "num_synapse": [200]
+        "windowsize": 1,
+        "num_synapse": [0,4,0,3,0,0,2]
       }
     ],
     "synapse": {
@@ -971,7 +971,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [43,9,3,3,4,9,2]
       },
       {
         "source": "Tm3",
@@ -980,7 +980,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [6,15,7,0,0,8,0]
       }
     ],
     "synapse": {
@@ -1008,7 +1008,7 @@
           "point": 0.5
         },
         "windowsize": 2,
-        "num_synapse": [200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        "num_synapse": [1,7,0,0,16,15,0,0,0,0,0,0,0,0,0,7,0,0,0]
       },
       {
         "source": "Mi4",
@@ -1017,7 +1017,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [4,7,6,0,0,1,0]
       },
       {
         "source": "C3",
@@ -1026,7 +1026,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [0,3,3,0,0,0,0]
       }
     ],
     "synapse": {
@@ -1053,8 +1053,8 @@
           "name": "axon",
           "point": 0.5
         },
-        "windowsize": 0,
-        "num_synapse": [200]
+        "windowsize": 1,
+        "num_synapse": [0,1,0,5,4,8,1]
       }
     ],
     "synapse": {
@@ -1082,7 +1082,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [38,0,18,6,15,2,0]
       },
       {
         "source": "Tm3",
@@ -1090,8 +1090,8 @@
           "name": "axon",
           "point": 0.5
         },
-        "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "windowsize": 2,
+        "num_synapse": [9,2,12,2,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0]
       }
     ],
     "synapse": {
@@ -1118,8 +1118,8 @@
           "name": "axon",
           "point": 0.5
         },
-        "windowsize": 2,
-        "num_synapse": [200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        "windowsize": 1,
+        "num_synapse": [6,1,0,0,0,13,2]
       },
       {
         "source": "Mi4",
@@ -1128,7 +1128,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [3,0,1,6,1,0,0]
       },
       {
         "source": "C3",
@@ -1137,7 +1137,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [0,0,1,3,1,0,0]
       }
     ],
     "synapse": {
@@ -1164,8 +1164,8 @@
           "name": "axon",
           "point": 0.5
         },
-        "windowsize": 0,
-        "num_synapse": [200]
+        "windowsize": 1,
+        "num_synapse": [0,1,0,0,1,6,0]
       }
     ],
     "synapse": {
@@ -1193,7 +1193,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [39,20,0,0,3,5,7]
       },
       {
         "source": "Tm3",
@@ -1202,7 +1202,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [0,8,13,6,0,0,1,0]
       }
     ],
     "synapse": {
@@ -1229,8 +1229,8 @@
           "name": "axon",
           "point": 0.5
         },
-        "windowsize": 2,
-        "num_synapse": [200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        "windowsize": 1,
+        "num_synapse": [0,1,1,10,11,0,0]
       },
       {
         "source": "Mi4",
@@ -1239,7 +1239,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [0,1,0,0,0,1,11]
       },
       {
         "source": "C3",
@@ -1248,7 +1248,7 @@
           "point": 0.5
         },
         "windowsize": 1,
-        "num_synapse": [200,0,0,0,0,0,0]
+        "num_synapse": [1,0,0,0,0,2,4]
       }
     ],
     "synapse": {
@@ -1276,7 +1276,7 @@
           "point": 0.5
         },
         "windowsize": 0,
-        "num_synapse": [200]
+        "num_synapse": [0,1,3,0,3,0,0]
       }
     ],
     "synapse": {
