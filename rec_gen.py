@@ -3,11 +3,11 @@ import numpy as np
 from itertools import product
 neighbors = [[0,1],[0,-1],[1,0],[-1,0],[1,-1],[-1,1]]
 
-layer_name = ["R1-6","L1","L3","L5","Mi1","Tm3","Mi4","Mi9","TmY15","CT1","C2","C3","T4a","T4b","T4c","T4d"]
+layer_name = ["R1-6","L1","L2","L3","L4","L5","Mi1","Tm3","Mi4","Mi9","TmY15","CT1","C2","C3","T4a","T4b","T4c","T4d"]
 dynamics = ["R","L","L","L","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1"]
 # layer size
-w = 35
-h = 40
+w = 10
+h = 10
 
 with open("./record_position.json","r") as f:
     recs = json.load(f)

@@ -13,8 +13,8 @@ windows["2"] = windowsize2
 #layer_name = ["R1-6","L1","L3","L5","Mi1","Tm3","Mi4","Mi9","TmY15","CT1","C1"]
 #dynamics = ["R","L","L","L","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1"]
 # layer size
-w = 35
-h = 40
+w = 10
+h = 10
 cells = []
 with open("./connection_window.json","r") as f:
     connection = json.load(f)
@@ -45,5 +45,5 @@ for con in connection:
             net.append(n)
 
 print(net)
-with open("./nwk.json","w") as f:
+with open("./nwk7.json","w") as f:
     json.dump(net,f, indent=4, sort_keys=True, separators=(',', ': '))

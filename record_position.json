@@ -14,7 +14,21 @@
     }
   },
   {
+    "target": "L2",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
     "target": "L3",
+    "section": {
+      "name": "axon",
+      "point": 0.5
+    }
+  },
+  {
+    "target": "L4",
     "section": {
       "name": "axon",
       "point": 0.5
@@ -42,7 +56,7 @@
     }
   },
   {
-    "target": "C1",
+    "target": "CT1",
     "section": {
       "name": "axon",
       "point": 0.5
