@@ -839,24 +839,6 @@
         },
         "windowsize": 0,
         "num_synapse": [1]
-      },
-      {
-        "source": "L5",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 1,
-        "num_synapse": [21,3,3,4,2,8,0]
-      },
-      {
-        "source": "Mi1",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 0,
-        "num_synapse": [16]
       }
     ],
     "synapse": {
@@ -870,8 +852,47 @@
     "synapse_opt": {
       "vth": -60,
       "vre": -20,
-      "k": 0.0003,
-      "gsat": 0.015,
+      "k": 0.0001,
+      "gsat": 0.005,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "Mi4 non delay input",
+    "target": "Mi4",
+    "sources": [
+      {
+        "source": "Mi1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [16]
+      },
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [21,3,3,4,2,8,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -80,
+      "k": 0.0006,
+      "gsat": 0.03,
       "delay": 0
     }
   },
@@ -937,10 +958,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -25,
       "vre": -80,
-      "k": 0.00005,
-      "gsat": 0.0025,
+      "k": 0.005,
+      "gsat": 0.25,
       "delay": 1
     }
   },
@@ -949,15 +970,6 @@
     "target": "Mi9",
     "sources": [
       {
-        "source": "L2",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 0,
-        "num_synapse": [2]
-      },
-      {
         "source": "L3",
         "section": {
           "name": "axon",
@@ -965,7 +977,28 @@
         },
         "windowsize": 0,
         "num_synapse": [65]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -42,
+      "vre": -20,
+      "k": 0.00004,
+      "gsat": 0.002,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "Mi9 non delay input",
+    "target": "Mi9",
+    "sources": [
       {
         "source": "Mi1",
         "section": {
@@ -987,8 +1020,8 @@
     "synapse_opt": {
       "vth": -60,
       "vre": -20,
-      "k": 0.02,
-      "gsat": 1,
+      "k": 0.00002,
+      "gsat": 0.001,
       "delay": 0
     }
   },
@@ -1061,7 +1094,28 @@
         },
         "windowsize": 0,
         "num_synapse": [57]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -70,
+      "vre": -80,
+      "k": 0.00002,
+      "gsat": 0.001,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Mi9 delayed inihibitory input (TmY series ignored)",
+    "target": "Mi9",
+    "sources": [
       {
         "source": "C3",
         "section": {
@@ -1081,10 +1135,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -30,
       "vre": -80,
-      "k": 0.02,
-      "gsat": 1,
+      "k": 0.00002,
+      "gsat": 0.001,
       "delay": 1
     }
   },
@@ -1269,8 +1323,8 @@
     "synapse_opt": {
       "vth": -70,
       "vre": -20,
-      "k": 0.001,
-      "gsat": 0.1,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -1299,8 +1353,8 @@
     "synapse_opt": {
       "vth": -80,
       "vre": -20,
-      "k": 0.001,
-      "gsat": 0.1,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -1336,10 +1390,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
-      "vre": -60,
-      "k": 0.01,
-      "gsat": 1,
+      "vth": -70,
+      "vre": -70,
+      "k": 0.0008,
+      "gsat": 0.04,
       "delay": 1
     }
   },
@@ -1366,10 +1420,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -40,
-      "vre": -60,
+      "vth": -63,
+      "vre": -70,
       "k": 0.01,
-      "gsat": 1,
+      "gsat": 0.5,
       "delay": 1
     }
   },
@@ -1398,8 +1452,8 @@
     "synapse_opt": {
       "vth": -55,
       "vre": -55,
-      "k": 0.01,
-      "gsat": 1,
+      "k": 0.001,
+      "gsat": 0.05,
       "delay": 1
     }
   },
@@ -1415,7 +1469,28 @@
         },
         "windowsize": 1,
         "num_synapse": [43,9,3,3,4,9,2]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -72,
+      "vre": -20,
+      "k": 0.0002,
+      "gsat": 0.01,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "T4b non-delayed ex input",
+    "target": "T4b",
+    "sources": [
       {
         "source": "Tm3",
         "section": {
@@ -1435,8 +1510,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -80,
       "vre": -20,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -1445,15 +1522,6 @@
     "target": "T4b",
     "sources": [
       {
-        "source": "Mi9",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 2,
-        "num_synapse": [1,7,0,0,16,15,0,0,0,0,0,0,0,0,0,7,0,0,0]
-      },
-      {
         "source": "Mi4",
         "section": {
           "name": "axon",
@@ -1461,7 +1529,28 @@
         },
         "windowsize": 1,
         "num_synapse": [4,7,6,0,0,1,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -62,
+      "vre": -70,
+      "k": 0.002,
+      "gsat": 0.10,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4b delayed inhibitory input",
+    "target": "T4b",
+    "sources": [
       {
         "source": "C3",
         "section": {
@@ -1481,8 +1570,40 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
-      "vre": -80,
+      "vth": -24,
+      "vre": -70,
+      "k": 0.0002,
+      "gsat": 0.01,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4b delayed inhibitory input",
+    "target": "T4b",
+    "sources": [
+      {
+        "source": "Mi9",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 2,
+        "num_synapse": [1,7,0,0,16,15,0,0,0,0,0,0,0,0,0,7,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -70,
+      "vre": -70,
+      "k": 0.0008,
+      "gsat": 0.04,
       "delay": 1
     }
   },
@@ -1509,8 +1630,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
-      "vre": -40,
+      "vth": -55,
+      "vre": -55,
+      "k": 0.002,
+      "gsat": 0.06,
       "delay": 1
     }
   },
@@ -1526,7 +1649,28 @@
         },
         "windowsize": 1,
         "num_synapse": [38,0,18,6,15,2,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -72,
+      "vre": -20,
+      "k": 0.0002,
+      "gsat": 0.01,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "T4c non-delayed ex input",
+    "target": "T4c",
+    "sources": [
       {
         "source": "Tm3",
         "section": {
@@ -1546,9 +1690,41 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -80,
       "vre": -20,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
+    }
+  },
+  {
+    "comment": "T4c delayed inhibitory input",
+    "target": "T4c",
+    "sources": [
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [3,0,1,6,1,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -62,
+      "vre": -70,
+      "k": 0.0025,
+      "gsat": 0.125,
+      "delay": 1
     }
   },
   {
@@ -1563,16 +1739,28 @@
         },
         "windowsize": 1,
         "num_synapse": [6,1,0,0,0,13,2]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
-      {
-        "source": "Mi4",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 1,
-        "num_synapse": [3,0,1,6,1,0,0]
-      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -70,
+      "vre": -70,
+      "k": 0.0002,
+      "gsat": 0.01,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4c delayed inhibitory input",
+    "target": "T4c",
+    "sources": [
       {
         "source": "C3",
         "section": {
@@ -1592,8 +1780,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
-      "vre": -80,
+      "vth": -24,
+      "vre": -70,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 1
     }
   },
@@ -1620,8 +1810,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
-      "vre": -40,
+      "vth": -55,
+      "vre": -55,
+      "k": 0.0008,
+      "gsat": 0.04,
       "delay": 1
     }
   },
@@ -1637,7 +1829,28 @@
         },
         "windowsize": 1,
         "num_synapse": [39,20,0,0,3,5,7]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -72,
+      "vre": -20,
+      "k": 0.0002,
+      "gsat": 0.01,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "T4d non-delayed ex input",
+    "target": "T4d",
+    "sources": [
       {
         "source": "Tm3",
         "section": {
@@ -1657,9 +1870,41 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -80,
       "vre": -20,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
+    }
+  },
+  {
+    "comment": "T4d delayed inhibitory input",
+    "target": "T4d",
+    "sources": [
+      {
+        "source": "Mi4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [0,1,0,0,0,1,11]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -62,
+      "vre": -70,
+      "k": 0.005,
+      "gsat": 0.25,
+      "delay": 1
     }
   },
   {
@@ -1674,16 +1919,28 @@
         },
         "windowsize": 1,
         "num_synapse": [0,1,1,10,11,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
-      {
-        "source": "Mi4",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 1,
-        "num_synapse": [0,1,0,0,0,1,11]
-      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -70,
+      "vre": -70,
+      "k": 0.0002,
+      "gsat": 0.01,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4d delayed inhibitory input",
+    "target": "T4d",
+    "sources": [
       {
         "source": "C3",
         "section": {
@@ -1703,8 +1960,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -24,
       "vre": -80,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 1
     }
   },
@@ -1731,8 +1990,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
-      "vre": -40,
+      "vth": -55,
+      "vre": -55,
+      "k": 0.001,
+      "gsat": 0.05,
       "delay": 1
     }
   }
