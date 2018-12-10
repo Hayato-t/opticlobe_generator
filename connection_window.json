@@ -220,7 +220,7 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -75,
+      "vth": -70,
       "vre": -80,
       "k": 0.00002,
       "gsat": 0.001,
@@ -342,8 +342,8 @@
     "synapse_opt": {
       "vth": -65,
       "vre": 0,
-      "k": 2,
-      "gsat": 200,
+      "k": 5,
+      "gsat": 250,
       "delay": 1
     }
   },
@@ -372,8 +372,8 @@
     "synapse_opt": {
       "vth": -80,
       "vre": -80,
-      "k": 2,
-      "gsat": 100,
+      "k": 10,
+      "gsat": 400,
       "delay": 1
     }
   },
@@ -412,24 +412,6 @@
     "target": "L5",
     "sources": [
       {
-        "source": "L4",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 1,
-        "num_synapse": [2,2,2,0,0,0,0]
-      },
-      {
-        "source": "L1",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 0,
-        "num_synapse": [90]
-      },
-      {
         "source": "L2",
         "section": {
           "name": "axon",
@@ -448,10 +430,70 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -65,
       "vre": 0,
-      "k": 0.05,
-      "gsat": 5,
+      "k": 1,
+      "gsat": 50,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "L5 delayed input",
+    "target": "L5",
+    "sources": [
+      {
+        "source": "L4",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 1,
+        "num_synapse": [2,2,2,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -65,
+      "vre": 0,
+      "k": 1,
+      "gsat": 50,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "L5 delayed input",
+    "target": "L5",
+    "sources": [
+      {
+        "source": "L1",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [90]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -65,
+      "vre": 0,
+      "k": 1,
+      "gsat": 50,
       "delay": 1
     }
   },
@@ -480,8 +522,8 @@
     "synapse_opt": {
       "vth": -80,
       "vre": -80,
-      "k": 4,
-      "gsat": 400,
+      "k": 20,
+      "gsat": 800,
       "delay": 1
     }
   },
@@ -519,7 +561,7 @@
     "synapse_opt": {
       "vth": -75,
       "vre": -40,
-      "k": 0.00002,
+      "k": 0.0000,
       "gsat": 0.001,
       "delay": 1
     }
@@ -556,9 +598,9 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -30,
+      "vth": -70,
       "vre": -80,
-      "k": 0.00002,
+      "k": 0.0000,
       "gsat": 0.001,
       "delay": 1
     }
@@ -567,15 +609,6 @@
     "comment": "Tm3 non delay input",
     "target": "Tm3",
     "sources": [
-      {
-        "source": "L5",
-        "section": {
-          "name": "axon",
-          "point": 0.5
-        },
-        "windowsize": 0,
-        "num_synapse": [30]
-      },
       {
         "source": "L1",
         "section": {
@@ -595,7 +628,37 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -63,
+      "vre": -80,
+      "k": 0.0001,
+      "gsat": 0.005,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "Tm3 non delay input",
+    "target": "Tm3",
+    "sources": [
+      {
+        "source": "L5",
+        "section": {
+          "name": "axon",
+          "point": 0.5
+        },
+        "windowsize": 0,
+        "num_synapse": [30]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
+      },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -50,
       "vre": -80,
       "k": 0.0001,
       "gsat": 0.005,
@@ -625,7 +688,7 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -70,
+      "vth": -75,
       "vre": -20,
       "k": 0.0002,
       "gsat": 0.01,
@@ -655,7 +718,7 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -40,
+      "vth": -80,
       "vre": -80,
       "k": 0.001,
       "gsat": 0.05,
@@ -869,7 +932,28 @@
         },
         "windowsize": 0,
         "num_synapse": [16]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -75,
+      "vre": -20,
+      "k": 0.0006,
+      "gsat": 0.03,
+      "delay": 0
+    }
+  },
+  {
+    "comment": "Mi4 non delay input",
+    "target": "Mi4",
+    "sources": [
       {
         "source": "L5",
         "section": {
@@ -889,7 +973,7 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -50,
       "vre": -80,
       "k": 0.0006,
       "gsat": 0.03,
@@ -908,7 +992,28 @@
         },
         "windowsize": 0,
         "num_synapse": [1]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -45,
+      "vre": -20,
+      "k": 0.0004,
+      "gsat": 0.02,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "Mi4 delayed input (Tm20 series ignored)",
+    "target": "Mi4",
+    "sources": [
       {
         "source": "C3",
         "section": {
@@ -928,7 +1033,7 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -70,
       "vre": -20,
       "k": 0.0004,
       "gsat": 0.02,
@@ -958,10 +1063,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -25,
+      "vth": -60,
       "vre": -80,
-      "k": 0.005,
-      "gsat": 0.25,
+      "k": 0.001,
+      "gsat": 0.05,
       "delay": 1
     }
   },
@@ -988,10 +1093,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -42,
+      "vth": -45,
       "vre": -20,
-      "k": 0.00004,
-      "gsat": 0.002,
+      "k": 0.0001,
+      "gsat": 0.005,
       "delay": 0
     }
   },
@@ -1018,7 +1123,7 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -60,
+      "vth": -75,
       "vre": -20,
       "k": 0.00002,
       "gsat": 0.001,
@@ -1105,7 +1210,7 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -70,
+      "vth": -80,
       "vre": -80,
       "k": 0.00002,
       "gsat": 0.001,
@@ -1135,7 +1240,7 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -30,
+      "vth": -70,
       "vre": -80,
       "k": 0.00002,
       "gsat": 0.001,
@@ -1292,9 +1397,9 @@
     },
     "synapse_opt": {
       "vth": -60,
-      "vre": -10,
-      "k": 0.001,
-      "gsat": 0.1,
+      "vre": -80,
+      "k": 0.00002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -1321,10 +1426,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -70,
+      "vth": -75,
       "vre": -20,
-      "k": 0.0002,
-      "gsat": 0.01,
+      "k": 0.01,
+      "gsat": 0.50,
       "delay": 0
     }
   },
@@ -1353,13 +1458,13 @@
     "synapse_opt": {
       "vth": -80,
       "vre": -20,
-      "k": 0.0002,
-      "gsat": 0.01,
+      "k": 0.01,
+      "gsat": 0.5,
       "delay": 0
     }
   },
   {
-    "comment": "T4a delayed inhibitory input",
+    "comment": "T4a non-delayed inhibitory",
     "target": "T4a",
     "sources": [
       {
@@ -1370,7 +1475,28 @@
         },
         "windowsize": 2,
         "num_synapse": [0,9,0,0,0,0,0,5,3,0,0,0,0,0,0,0,0,0,0]
+      }
+    ],
+    "synapse": {
+      "suffix": "gsyn2",
+      "section": {
+        "name": "axon",
+        "point": 0.5
       },
+      "value": "vpre"
+    },
+    "synapse_opt": {
+      "vth": -60,
+      "vre": -70,
+      "k": 0.001,
+      "gsat": 0.25,
+      "delay": 1
+    }
+  },
+  {
+    "comment": "T4a delayed inhibitory input",
+    "target": "T4a",
+    "sources": [
       {
         "source": "C3",
         "section": {
@@ -1392,8 +1518,8 @@
     "synapse_opt": {
       "vth": -70,
       "vre": -70,
-      "k": 0.0008,
-      "gsat": 0.04,
+      "k": 0.05,
+      "gsat": 5,
       "delay": 1
     }
   },
@@ -1420,10 +1546,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -63,
+      "vth": -80,
       "vre": -70,
-      "k": 0.01,
-      "gsat": 0.5,
+      "k": 0.05,
+      "gsat": 5,
       "delay": 1
     }
   },
@@ -1450,10 +1576,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -55,
-      "vre": -55,
-      "k": 0.001,
-      "gsat": 0.05,
+      "vth": -60,
+      "vre": -60,
+      "k": 0.0001,
+      "gsat": 0.005,
       "delay": 1
     }
   },

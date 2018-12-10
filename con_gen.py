@@ -22,28 +22,33 @@ with open("./connection_window.json","r") as f:
 net = []
 for con in connection:
     target = con["target"]
+#    print(target)
     for src in con["sources"]:
-        print(src)
+#        print(src)
         for x,y in product(range(w),range(h)):
             n = {}
             n["target_synapse"] = con["synapse"]
             n["synapse_opt"] = con["synapse_opt"]
-            for coord in windows[str(src["windowsize"])]:
+#            print(windows[str(src["windowsize"])])
+            for i,coord in enumerate(windows[str(src["windowsize"])]):
                 if x + coord[0]< 0 or x + coord[0]>= w:
                     continue
                 if y + coord[1]< 0 or y + coord[1]>= h:
                     continue
+#                print("{},{},{}".format(x,y,coord))
                 n["target_cellname"] = con["target"] + "," + str(x) + "," + str(y)
                 n["source_cellname"] = src["source"] + "," + str(x+coord[0]) + "," + str(y+coord[1])
                 n["source_section"] = src["section"]
                 synlist = src["num_synapse"]
-                n["synapse_opt"]["numsyn"] = synlist[0]
+                n["synapse_opt"]["numsyn"] = synlist[i]
+                if synlist[i] == 0:
+                    continue
                 if "source_opt" in src:
                     n["source_opt"] = src["source_opt"]
                 else:
                     n["source_opt"] = {}
-            net.append(n)
+                net.append(n)
 
-print(net)
-with open("./nwk7.json","w") as f:
+#print(net)
+with open("./nwk6.json","w") as f:
     json.dump(net,f, indent=4, sort_keys=True, separators=(',', ': '))

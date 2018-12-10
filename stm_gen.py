@@ -9,7 +9,7 @@ dynamics = ["R","L","L","L","L","L","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","Mi1","M
 w = 10
 h = 10
 stims = []
-stim_timing = [[50,100,0.25],[100,150,0.5],[150,200,1.0],[200,250,2.0],[250,300,1.00],[300,350,0.5],[350,400,0.25]]
+stim_timing = [[300,1100,1]]
 for st in stim_timing:
     for x,y in product(range(w),range(h)):
         stim = {}
@@ -20,8 +20,8 @@ for st in stim_timing:
         stim["opt"]["st"] = st[0]
         stim["opt"]["en"] = st[1]
         stim["opt"]["amp"] = st[2]
-        stim["opt"]["slope"] = 0.1
+        stim["opt"]["slope"] = 0.03
         stims.append(stim)
 
-with open("./stm.json","w") as f:
+with open("./wholestm.json","w") as f:
     json.dump(stims,f)
