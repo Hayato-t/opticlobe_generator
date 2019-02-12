@@ -1530,7 +1530,7 @@
     "synapse_opt": {
       "vth": -51,
       "vre": -70,
-      "k": 5,
+      "k": 0,
       "gsat": 150,
       "delay": 1
     }
@@ -1560,7 +1560,7 @@
     "synapse_opt": {
       "vth": -97,
       "vre": -70,
-      "k": 8,
+      "k": 15,
       "gsat": 500,
       "delay": 1
     }
@@ -1590,7 +1590,7 @@
     "synapse_opt": {
       "vth": -80,
       "vre": -70,
-      "k": 8,
+      "k": 15,
       "gsat": 150,
       "delay": 1
     }
@@ -1648,10 +1648,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -75,
+      "vth": -72,
       "vre": -20,
-      "k": 1.2,
-      "gsat": 50,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -1678,10 +1678,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -75,
+      "vth": -80,
       "vre": -20,
-      "k": 0.3,
-      "gsat": 20,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -1708,10 +1708,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -80,
+      "vth": -62,
       "vre": -70,
-      "k": 8,
-      "gsat": 500,
+      "k": 0.002,
+      "gsat": 0.10,
       "delay": 1
     }
   },
@@ -1738,10 +1738,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -97,
+      "vth": -24,
       "vre": -70,
-      "k": 8,
-      "gsat": 500,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 1
     }
   },
@@ -1768,10 +1768,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -51,
+      "vth": -70,
       "vre": -70,
-      "k": 5,
-      "gsat": 150,
+      "k": 0.0008,
+      "gsat": 0.04,
       "delay": 1
     }
   },
@@ -1828,10 +1828,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -75,
+      "vth": -72,
       "vre": -20,
-      "k": 1.2,
-      "gsat": 60,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -1858,10 +1858,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -75,
+      "vth": -80,
       "vre": -20,
-      "k": 0.1,
-      "gsat": 6,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -1888,10 +1888,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -80,
+      "vth": -62,
       "vre": -70,
-      "k": 8,
-      "gsat": 400,
+      "k": 0.0025,
+      "gsat": 0.125,
       "delay": 1
     }
   },
@@ -1918,10 +1918,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -51,
+      "vth": -70,
       "vre": -70,
-      "k": 5,
-      "gsat": 400,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 1
     }
   },
@@ -1948,10 +1948,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -97,
+      "vth": -24,
       "vre": -70,
-      "k": 8,
-      "gsat": 400,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 1
     }
   },
@@ -2008,10 +2008,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -75,
+      "vth": -72,
       "vre": -20,
-      "k": 1.2,
-      "gsat": 60,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -2038,10 +2038,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -75,
+      "vth": -80,
       "vre": -20,
-      "k": 0.1,
-      "gsat": 6,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 0
     }
   },
@@ -2068,10 +2068,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -80,
+      "vth": -62,
       "vre": -70,
-      "k": 10,
-      "gsat": 600,
+      "k": 0.005,
+      "gsat": 0.25,
       "delay": 1
     }
   },
@@ -2098,10 +2098,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -51,
+      "vth": -70,
       "vre": -70,
-      "k": 8,
-      "gsat": 160,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 1
     }
   },
@@ -2128,10 +2128,10 @@
       "value": "vpre"
     },
     "synapse_opt": {
-      "vth": -97,
-      "vre": -70,
-      "k": 10,
-      "gsat": 200,
+      "vth": -24,
+      "vre": -80,
+      "k": 0.0002,
+      "gsat": 0.01,
       "delay": 1
     }
   },

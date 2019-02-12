@@ -1,6 +1,7 @@
 import json
 import numpy as np
 from itertools import product
+import copy
 neighbors = [[0,1],[0,-1],[1,0],[-1,0],[1,-1],[-1,1]]
 windowsize0 = [[0,0]]
 windowsize1 = [[0,0],[1,0],[1,-1],[0,-1],[-1,0],[-1,1],[0,1]]
@@ -16,7 +17,7 @@ windows["2"] = windowsize2
 w = 10
 h = 10
 cells = []
-with open("./connection_window.json","r") as f:
+with open("./connection_window_ex2.json","r") as f:
     connection = json.load(f)
 
 net = []
@@ -35,9 +36,16 @@ for con in connection:
                     continue
                 if y + coord[1]< 0 or y + coord[1]>= h:
                     continue
-#                print("{},{},{}".format(x,y,coord))
+                if con["target"] == "T4a" and src["source"] == "Mi1":
+                    if x == 3 and y == 3:
+                        print("{},{},{}".format(x,y,coord))
+                        print("{},{}".format(x+coord[0], y+coord[1]))
                 n["target_cellname"] = con["target"] + "," + str(x) + "," + str(y)
                 n["source_cellname"] = src["source"] + "," + str(x+coord[0]) + "," + str(y+coord[1])
+                if con["target"] == "T4a" and src["source"] == "Mi1":
+                    if x == 3 and y == 3:
+                        print(n["source_cellname"])
+
                 n["source_section"] = src["section"]
                 synlist = src["num_synapse"]
                 n["synapse_opt"]["numsyn"] = synlist[i]
@@ -47,7 +55,7 @@ for con in connection:
                     n["source_opt"] = src["source_opt"]
                 else:
                     n["source_opt"] = {}
-                net.append(n)
+                net.append(copy.deepcopy(n))
 
 #print(net)
 with open("./nwk6.json","w") as f:
